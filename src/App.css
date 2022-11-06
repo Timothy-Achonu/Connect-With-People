@@ -1,0 +1,527 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+}
+a {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+a.active {
+  text-decoration: underline;
+  /* color: red; */
+}
+
+/* Nav */
+nav {
+  display: flex;
+  background-color: rgba(77, 15, 221, 0.5);
+  /* background-color: yellow !important; */
+  padding: 0 40px;
+  align-items: center;
+  height: 13vh;
+}
+
+nav .conectar {
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding-bottom: 10px;
+}
+nav .conectar img {
+  padding-top: 14px;
+}
+nav .nav-links {
+  display: none;
+}
+nav .hamburger-menu {
+  margin-left: auto;
+  cursor: pointer;
+  font-size: 2rem;
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+}
+
+/* NAV MENU */
+nav .menu {
+  background-color: white;
+  color: rgba(77, 15, 221, 0.5);
+  position: fixed;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: none;
+  width: 100%;
+  height: 100vh;
+}
+nav .menu .close {
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: end;
+}
+.menu-links a {
+  color: rgba(77, 15, 221, 0.5);
+  margin-left: 13px;
+  font-size: 1.6rem;
+}
+
+nav .menu.show-menu {
+  display: block;
+}
+
+/* Home page */
+.home-page {
+  display: flex;
+  background: url("./assets/christina-wocintechchat-com-faEfWCdOKIg-unsplash.jpg")
+    no-repeat center center / cover;
+  min-height: 87vh;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.home-page .dark-bg-wrapper {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 85%;
+  margin: 0 auto;
+  padding: 20px 20px;
+  padding-bottom: 0px;
+  border-radius: 50px;
+  box-shadow: 10px 10px 27px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 27px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 27px 0px rgba(0, 0, 0, 0.75);
+}
+.home-page .meet-conectar {
+  display: none;
+}
+
+.home-page .meet-people {
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0;
+}
+.home-page form {
+  margin: 0;
+  padding: 15px 20px;
+  padding-bottom: 0;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 86%;
+  /* justify-content: center; */
+}
+.home-page form div {
+  margin: 10px;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-page form div input {
+  padding: 14px 20px;
+  outline: none;
+  border: #000 inset 2px solid;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  width: 75%;
+}
+.home-page form .button {
+  width: fit-content;
+  margin: 15px 0;
+  margin-bottom: 0;
+  padding: 15px 43px;
+  font-size: 1.2rem;
+  background-color: rgba(77, 15, 221, 0.5);
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+}
+
+/* Contact page */
+.contact-us {
+  display: flex;
+  background: url("./assets/christina-wocintechchat-com-faEfWCdOKIg-unsplash.jpg")
+    no-repeat center center / cover;
+  min-height: 87vh;
+  flex-direction: column;
+  padding-top: 10px;
+}
+.contact-us .bg-dark {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  /* align-items: center; */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 85%;
+  margin: 30px auto;
+  padding: 90px 20px;
+  border-radius: 50px;
+  box-shadow: 10px 10px 27px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 27px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 27px 0px rgba(0, 0, 0, 0.75);
+}
+.contact-us .bg-dark h1 {
+  font-size: 4rem;
+}
+.contact-us .bg-dark p {
+  margin-top: 30px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.8;
+}
+
+/* About us */
+.about-us {
+  display: flex;
+  background: url("./assets/christina-wocintechchat-com-faEfWCdOKIg-unsplash.jpg")
+    no-repeat center center / cover;
+  min-height: 87vh;
+  flex-direction: column;
+  padding-top: 10px;
+}
+.about-us .bg-dark {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  /* align-items: center; */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 85%;
+  margin: 30px auto;
+  padding: 60px 20px;
+  border-radius: 50px;
+  box-shadow: 10px 10px 27px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 27px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 27px 0px rgba(0, 0, 0, 0.75);
+}
+.about-us .bg-dark h1 {
+  font-size: 4rem;
+}
+.about-us .bg-dark p {
+  margin-top: 30px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.about-us .bg-dark p span {
+  font-size: 1.7rem;
+}
+
+
+/* Pagination */
+.pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pagination .users-left-right {
+  display: flex;
+  width: 100%;
+}
+.pagination .users-left-right .all-users{
+   width: 60%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.pagination .users-left-right .left-side {
+  margin-right: auto;
+  width: 20%;
+  /* background-color: rgba(0, 0, 0, 0.4); */
+}
+.pagination .users-left-right .right-side {
+  margin-left: auto;
+  width: 20%;
+  /* background-color: rgba(0, 0, 0, 0.4); */
+}
+
+/* user */
+.user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(77, 15, 221, 0.5);
+  color: white;
+  /* width: 55%; */
+  max-width: 400px;
+  /* min-width: 400px; */
+  margin: 40px 20px;
+  padding: 35px 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 10px 27px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 27px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 27px 0px rgba(0, 0, 0, 0.75);
+}
+.user figure {
+  width: 200px;
+  margin-bottom: 10px;
+}
+img {
+  width: 100%;
+  border-radius: 25px;
+}
+.user h3 {
+  margin:0;
+}
+.user div {
+  margin-top: 10px;
+}
+
+.loading {
+  font-size: 4rem;
+  /* min-height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 140px;
+  color : rgba(77, 15, 221, 0.5);
+}
+
+
+/* User Profile */
+.user-profile {
+  padding: 30px ;
+  /* color: rgba(77, 15, 221, 1); */
+}
+.user-profile .details-connect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  margin-bottom: 30px;
+  padding: 0 30px ;
+  
+}
+.user-profile .details-connect .connect {
+  background-color: green;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+.user-profile .username {
+  display: flex;
+  width: 80%;
+  background-color: white;
+  margin: 30px auto;
+  border: 1px solid rgba(77, 15, 221, 0.5);
+  padding: 20px;
+  justify-content: center;
+  flex-direction: column;
+  align-items:center;
+ 
+}
+.user-profile .username div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.user-profile .username figure {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+}
+.user-profile .username figure img {
+  border-radius: 50%;
+}
+.user-profile .username .name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user-profile .personal-info {
+  display: flex;
+  width: 80%;
+  background-color: white;
+  margin: 30px auto;
+  border: 1px solid rgba(77, 15, 221, 0.5);
+  padding: 20px;
+  justify-content: center;
+  flex-direction: column;
+  align-items:center;
+  text-align: center;
+}
+.user-profile .personal-info div {
+  margin-top: 20px;
+}
+
+
+
+/* Pagination buttons styling */
+.pagination-buttons {
+  margin: 30px;
+}
+
+small {
+  border: 2px solid #777;
+  border-radius: 7px;
+  padding: 5px 12px;
+  color: #777;
+}
+
+.paginationItem {
+  background: #fff;
+  border: 2px solid #666;
+  padding: 10px 15px;
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  position: relative;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.paginationItem span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.prev,
+.next {
+  background: #fff;
+  border: none;
+  padding: 10px;
+  color: blue;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.paginationItem.active {
+  border: 1px solid #888;
+  color: #888;
+  pointer-events: none;
+}
+
+.prev.disabled,
+.next.disabled {
+  pointer-events: none;
+  box-shadow: none;
+  color: #999;
+}
+
+.not-found,
+.error {
+  text-align: center;
+  margin: 140px;
+}
+
+/* Media queries begins */
+@media (min-width: 900px) {
+  /* Nav */
+  nav .conectar {
+    color: white;
+  }
+
+  nav .nav-links {
+    display: flex;
+    margin-left: auto;
+  }
+  nav a {
+    color: white;
+    margin-left: 13px;
+    font-size: 1.6rem;
+  }
+  nav .hamburger-menu {
+    display: none;
+  }
+
+  /* HOME-PAGE */
+  .home-page .dark-bg-wrapper {
+    width: 85%;
+    margin: 0 auto;
+    padding: 20px 60px;
+  }
+  .home-page .meet-conectar {
+    display: none;
+  }
+  .home-page form {
+    padding: 25px 20px;
+    width: 86%;
+  }
+  .home-page form div {
+    width: 95%;
+  }
+  .home-page form div input {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home-page .meet-conectar {
+    margin-top: 60px;
+    font-size: 3rem;
+    padding: 0 30px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    width: 50%;
+  }
+  .home-page form {
+    padding: 25px 20px;
+    width: 50%;
+  }
+}
+
+@media (min-width: 1400px)  {
+  .home-page .meet-conectar {
+    margin-top: 60px;
+    font-size: 3.4rem;
+    padding: 0 30px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    width: 50%;
+  }
+
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* * {
+  border: 1px red solid;
+} */
